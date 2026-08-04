@@ -1,161 +1,198 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lokesh Gundoju | Portfolio</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- MathJax for LaTeX -->
-    <script>
-        MathJax = {
-            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
-            svg: { fontCache: 'global' }
-        };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        body { background-color: #ffffff; color: #000000; }
-        .brutal-border { border: 3px solid #000000; }
-        .brutal-shadow { box-shadow: 8px 8px 0px 0px #000000; }
-        .code-font { font-family: 'JetBrains Mono', monospace; }
-        h1, h2, h3 { text-transform: uppercase; font-weight: 900; }
-    </style>
-</head>
-<body class="antialiased">
-
-    <nav class="sticky top-0 w-full z-50 bg-white border-b-4 border-black">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="code-font font-bold text-3xl tracking-tighter">L.G.</div>
-            <div class="hidden md:flex space-x-10 text-sm font-bold uppercase tracking-widest">
-                <a href="#about" class="hover:underline underline-offset-4">About</a>
-                <a href="#skills" class="hover:underline underline-offset-4">Skills</a>
-                <a href="#projects" class="hover:underline underline-offset-4">Projects</a>
-                <a href="#publications" class="hover:underline underline-offset-4">Research</a>
-            </div>
-            <div class="flex items-center gap-4">
-                <a href="resume.pdf" class="px-6 py-3 bg-black text-white text-xs font-bold uppercase tracking-wider hover:bg-white hover:text-black border-2 border-black transition-all">Resume</a>
-            </div>
-        </div>
-    </nav>
-
-    <main class="max-w-7xl mx-auto px-6 py-12">
-        <section id="about" class="min-h-[70vh] flex flex-col justify-center border-b-4 border-black py-20">
-            <h1 class="text-6xl md:text-9xl font-black leading-none mb-8 tracking-tighter">
-                COMPUTATIONAL<br>LITHOGRAPHY &<br><span class="text-white bg-black p-2">EDGE ML</span>
-            </h1>
-            <p class="text-xl md:text-2xl max-w-3xl leading-snug font-medium">
-                Electronics & Communication Engineering student. I build data-driven optimization tools for semiconductor manufacturing, focusing on sub-wavelength physics and embedded intelligence.
-            </p>
-        </section>
-
-        <section id="skills" class="py-20 border-b-4 border-black">
-            <h2 class="text-4xl mb-12">01. Technical Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="brutal-border p-8 brutal-shadow">
-                    <h3 class="font-bold text-xl mb-4 underline">Process & Yield</h3>
-                    <ul class="text-lg space-y-2 uppercase font-bold text-slate-700">
-                        <li>SPC / DOE</li>
-                        <li>Computational Lithography</li>
-                        <li>EWMA / CUSUM</li>
-                    </ul>
-                </div>
-                <div class="brutal-border p-8 brutal-shadow">
-                    <h3 class="font-bold text-xl mb-4 underline">Software & AI</h3>
-                    <ul class="text-lg space-y-2 uppercase font-bold text-slate-700">
-                        <li>Python / C++</li>
-                        <li>XGBoost / Ensemble ML</li>
-                        <li>Time-Series Analytics</li>
-                    </ul>
-                </div>
-                <div class="brutal-border p-8 brutal-shadow">
-                    <h3 class="font-bold text-xl mb-4 underline">Hardware</h3>
-                    <ul class="text-lg space-y-2 uppercase font-bold text-slate-700">
-                        <li>Verilog / RTL</li>
-                        <li>TinyML / Edge Devices</li>
-                        <li>Altium PCB Design</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="py-20 border-b-4 border-black">
-            <h2 class="text-4xl mb-12">02. Projects</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div class="brutal-border p-10 brutal-shadow bg-black text-white">
-                    <h3 class="text-3xl font-bold mb-4">AttoFab</h3>
-                    <p class="text-lg mb-6 opacity-80">
-                        Numerical modeling of resolution limits using the Rayleigh Criterion for sub-7nm process development.
+<!-- ... existing code ... -->
+    <!-- KEY PROJECTS -->
+    <section id="projects" class="mb-16">
+        <h2 class="mono text-2xl font-black uppercase mb-6 border-b-2 border-white pb-2">// KEY_PROJECTS</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- AttoFab -->
+            <div class="brutalist-card p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-black uppercase">AttoFab</h3>
+                        <span class="mono text-xs border border-white px-2 py-1 font-bold">SIMULATOR</span>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-4">
+                        Engineered an open-source, Python-based computational simulation engine targeting sub-wavelength fabrication and pattern transfer profile validation.
                     </p>
-                    <div class="bg-white text-black p-6 mb-6 code-font text-center text-xl font-bold border-4 border-black">
-                        $R = k_1 \cdot \frac{\lambda}{NA}$
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-3 py-1 bg-white text-black font-bold uppercase text-xs">Python</span>
-                        <span class="px-3 py-1 bg-white text-black font-bold uppercase text-xs">Numerical Modeling</span>
+                    <div class="my-4 p-4 border border-white bg-zinc-900 text-center mono text-sm">
+                        $$R = k_1 \cdot \frac{\lambda}{\text{NA}}$$
+                        <p class="text-xs text-gray-400 mt-2">Rayleigh Criterion optimization for sub-7nm process development.</p>
                     </div>
                 </div>
+                <div class="flex flex-wrap gap-2 mono text-xs mt-4">
+                    <span class="tag px-2 py-1">Python</span>
+                    <span class="tag px-2 py-1">Numerical Modeling</span>
+                    <span class="tag px-2 py-1">EUV 13.5nm</span>
+                </div>
+            </div>
 
-                <div class="brutal-border p-10 brutal-shadow">
-                    <h3 class="text-3xl font-bold mb-4 underline">SPC Yield Analytics</h3>
-                    <p class="text-lg mb-6 text-slate-700">
-                        Automated excursion monitoring for manufacturing wafers. Achieved 90% anomaly detection using EWMA/CUSUM charts.
+            <!-- Double_PINN -->
+            <div class="brutalist-card p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-black uppercase">Double_PINN</h3>
+                        <span class="mono text-xs border border-white px-2 py-1 font-bold bg-white text-black">PUBLIC</span>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-4">
+                        A differentiable pipeline bridging process physics and device physics.
                     </p>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-3 py-1 bg-black text-white font-bold uppercase text-xs">Time-Series</span>
-                        <span class="px-3 py-1 bg-black text-white font-bold uppercase text-xs">Yield Analytics</span>
-                    </div>
+                </div>
+                <div class="flex flex-wrap gap-2 mono text-xs mt-4">
+                    <span class="tag px-2 py-1">Physics-Informed NN</span>
+                    <span class="tag px-2 py-1">Process Simulation</span>
+                    <span class="tag px-2 py-1">Python</span>
                 </div>
             </div>
-        </section>
 
-        <section id="publications" class="py-20 border-b-4 border-black">
-            <h2 class="text-4xl mb-12">03. Research</h2>
-            <div class="brutal-border p-10 brutal-shadow">
-                <h3 class="font-bold text-2xl mb-2">Early Warning System for At-Risk Students</h3>
-                <p class="text-lg mb-4 uppercase tracking-widest text-slate-500">EdArXiv | 2026</p>
-                <a href="https://doi.org/10.35542/osf.io/ga46q_v1" class="text-black font-bold text-lg underline underline-offset-8 decoration-4 hover:bg-black hover:text-white transition p-2">
-                    DOI: 10.35542/osf.io/ga46q_v1
-                </a>
+            <!-- AttoCore -->
+            <div class="brutalist-card p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-black uppercase">AttoCore</h3>
+                        <span class="mono text-xs border border-white px-2 py-1 font-bold bg-white text-black">PUBLIC</span>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-4">
+                        The single-neuron LIF (Leaky Integrate-and-Fire) core Simulator.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 mono text-xs mt-4">
+                    <span class="tag px-2 py-1">Spiking Neural Networks</span>
+                    <span class="tag px-2 py-1">Hardware Simulation</span>
+                </div>
             </div>
-        </section>
 
-        <section id="contact" class="py-20">
-            <h2 class="text-4xl mb-12 text-center">Get in Touch</h2>
-            <form action="mailto:lokesh_gundoju@outlook.com" method="post" enctype="text/plain" class="max-w-2xl mx-auto brutal-border p-10 brutal-shadow space-y-6">
-                <input type="text" name="name" placeholder="Name" aria-label="Name" class="w-full border-b-4 border-black p-3 text-xl focus:outline-none">
-                <input type="email" name="email" placeholder="Email" aria-label="Email" class="w-full border-b-4 border-black p-3 text-xl focus:outline-none">
-                <textarea name="message" placeholder="Message" aria-label="Message" class="w-full border-b-4 border-black p-3 text-xl focus:outline-none h-40"></textarea>
-                <button type="submit" class="w-full bg-black text-white py-4 font-bold text-lg uppercase tracking-widest hover:bg-white hover:text-black border-4 border-black transition">Send Message</button>
-            </form>
-        </section>
-    </main>
+            <!-- AttoSense -->
+            <div class="brutalist-card p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-black uppercase">AttoSense</h3>
+                        <span class="mono text-xs border border-white px-2 py-1 font-bold">MULTIMODAL AI</span>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-4">
+                        Accomplished production-ready NLU for intent analysis as measured by successful zero-shot discovery and multimodal auditing. Architected a FastAPI microservice utilizing Groq Whisper (Audio) and Llama-3.2-Vision (Image).
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 mono text-xs mt-4">
+                    <span class="tag px-2 py-1">FastAPI</span>
+                    <span class="tag px-2 py-1">Groq Whisper</span>
+                    <span class="tag px-2 py-1">Llama-3.2-Vision</span>
+                </div>
+            </div>
 
-    <footer class="py-12 border-t-4 border-black text-center">
-        <div class="flex justify-center gap-10 text-3xl mb-8">
-            <a href="https://github.com/LKSH-GNDJ" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/lokesh-gundoju" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://orcid.org/0009-0004-6582-6644" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
+            <!-- SPC Yield Analytics -->
+            <div class="brutalist-card p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-black uppercase">Wafer Yield Analytics (SPC)</h3>
+                        <span class="mono text-xs border border-white px-2 py-1 font-bold">ANALYTICS</span>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-4">
+                        Engineered an automated yield excursion monitoring framework using time-series analytics on production-grade wafer datasets, modeling a 20-40% reduction in defective starts. Designed baseline-calibrated EWMA and CUSUM control charts achieving a 90% anomaly detection rate.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 mono text-xs mt-4">
+                    <span class="tag px-2 py-1">SPC</span>
+                    <span class="tag px-2 py-1">EWMA/CUSUM</span>
+                    <span class="tag px-2 py-1">Time-Series</span>
+                </div>
+            </div>
+
+            <!-- SECOM Sensor Processing -->
+            <div class="brutalist-card p-6 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-black uppercase">SECOM Sensor Processing</h3>
+                        <span class="mono text-xs border border-white px-2 py-1 font-bold">ML / YIELD</span>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-4">
+                        Achieved 90% accuracy in semiconductor wafer defect classification to prevent process drift on 1,567 manufacturing runs. Optimized 8 ensemble machine learning models using stratified cross-validation yielding 95% ROC-AUC.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 mono text-xs mt-4">
+                    <span class="tag px-2 py-1">Ensemble ML</span>
+                    <span class="tag px-2 py-1">XGBoost</span>
+                    <span class="tag px-2 py-1">Imbalanced Data</span>
+                </div>
+            </div>
+
+            <!-- CAPHA TinyML -->
+            <div class="brutalist-card p-6 flex flex-col justify-between md:col-span-2 lg:col-span-1">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-2xl font-black uppercase">CAPHA - Embedded TinyML</h3>
+                        <span class="mono text-xs border border-white px-2 py-1 font-bold">EDGE IoT</span>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-4">
+                        Designed an autonomous, real-time inference framework for low-power microcontrollers featuring proactive anomaly detection. Integrated TinyML models onto IoT edge devices, maintaining minimal RAM/Flash footprints without external cloud reliance.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-2 mono text-xs mt-4">
+                    <span class="tag px-2 py-1">TinyML</span>
+                    <span class="tag px-2 py-1">Embedded C</span>
+                    <span class="tag px-2 py-1">IoT Architecture</span>
+                </div>
+            </div>
+
         </div>
-        <p class="font-bold uppercase tracking-widest">&copy; 2026 Lokesh Gundoju. Engineering Intelligence.</p>
-    </footer>
+    </section>
 
-</body>
-</html>
+    <!-- EXPERIENCE -->
+<!-- ... existing code ... -->
+    <!-- PUBLICATIONS & EDUCATION -->
+    <section id="publications" class="mb-16">
+        <h2 class="mono text-2xl font-black uppercase mb-6 border-b-2 border-white pb-2">// PUBLICATIONS_&_EDUCATION</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <div class="space-y-6">
+                <!-- Publication 1 -->
+                <div class="brutalist-card p-6">
+                    <h3 class="mono font-bold text-lg mb-4 uppercase underline">RESEARCH PREPRINT</h3>
+                    <p class="text-sm font-bold mb-2">Lokesh, G. (2026). Early Warning System for At-Risk Students using SHAP values & OULAD dataset.</p>
+                    <p class="text-xs text-gray-300 mb-4">EdArXiv Preprint. Benchmarked Logistic Regression, Random Forest, and XGBoost across 32,593 subjects with SHAP model explainability integration.</p>
+                    <a href="https://doi.org/10.35542/osf.io/ga46q_v1" target="_blank" class="mono text-xs underline font-bold bg-white text-black px-2 py-1 inline-block">DOI: 10.35542/osf.io/ga46q_v1</a>
+                </div>
+
+                <!-- Publication 2 -->
+                <div class="brutalist-card p-6">
+                    <h3 class="mono font-bold text-lg mb-4 uppercase underline">SSRN PUBLICATION</h3>
+                    <p class="text-sm font-bold mb-2">Gundoju, Lokesh (July 30, 2026). Analytical Redundancy for False Alarm Suppression in Edge-based Semiconductor Process Control.</p>
+                    <p class="text-xs text-gray-300 mb-4">Available at SSRN.</p>
+                    <a href="http://dx.doi.org/10.2139/ssrn.7211483" target="_blank" class="mono text-xs underline font-bold bg-white text-black px-2 py-1 inline-block">DOI: 10.2139/ssrn.7211483</a>
+                </div>
+
+                <!-- Publication 3 -->
+                <div class="brutalist-card p-6">
+                    <h3 class="mono font-bold text-lg mb-4 uppercase underline">IEEE DATAPORT</h3>
+                    <p class="text-sm font-bold mb-2">Risk factors and their Shap values (Early warning system for At-Risk students using SHAP and OULAD with Week-2 time frame)</p>
+                    <p class="text-xs text-gray-300 mb-4">Published on IEEE DataPort (Jan 11, 2025).</p>
+                    <a href="https://doi.org/10.21227/SVQF-PN8" target="_blank" class="mono text-xs underline font-bold bg-white text-black px-2 py-1 inline-block">DOI: 10.21227/SVQF-PN8</a>
+                </div>
+            </div>
+
+            <div class="brutalist-card p-6 h-fit">
+                <h3 class="mono font-bold text-lg mb-4 uppercase underline">ACADEMIC BACKGROUND</h3>
+                <ul class="space-y-4 text-sm">
+                    <li>
+                        <strong class="block mb-1">BTech in ECE</strong> 
+                        <span class="text-gray-300">Adikavi Nannaya University (AKNU), 3rd Year (Exp. April 2027).</span>
+                    </li>
+                    <li>
+                        <strong class="block mb-1">Summer School 2026</strong> 
+                        <span class="text-gray-300">CeNSE, IISc Bengaluru (Semiconductor Fabrication, Computational Lithography, Materials).</span>
+                    </li>
+                    <li>
+                        <strong class="block mb-1">Semiconductor Fabrication 101</strong> 
+                        <span class="text-gray-300">Purdue University, UT Austin, and Intel Corporation (May 2025).</span>
+                    </li>
+                    <li>
+                        <strong class="block mb-1">Undergraduate Diploma in ECE</strong> 
+                        <span class="text-gray-300">SBTET A.P., Government Polytechnic, Anaparthi (May 2024).</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+<!-- ... existing code ... -->
