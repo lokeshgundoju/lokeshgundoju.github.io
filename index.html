@@ -37,6 +37,9 @@
         .brutal-shadow { box-shadow: 8px 8px 0px 0px #000000; }
         .code-font { font-family: 'JetBrains Mono', monospace; }
         h1, h2, h3 { text-transform: uppercase; font-weight: 900; }
+        /* Smooth transitions for interactive elements */
+        a, button, .brutal-shadow { transition: all 0.2s ease-in-out; }
+        .brutal-card-hover:hover { transform: translate(-4px, -4px); box-shadow: 12px 12px 0px 0px #000000; }
     </style>
 </head>
 <body class="antialiased">
@@ -44,24 +47,25 @@
     <nav class="sticky top-0 w-full z-50 bg-white border-b-4 border-black">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="code-font font-bold text-3xl tracking-tighter">L.G.</div>
-            <div class="hidden md:flex space-x-10 text-sm font-bold uppercase tracking-widest">
+            <div class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-widest">
                 <a href="#about" class="hover:underline underline-offset-4">About</a>
                 <a href="#skills" class="hover:underline underline-offset-4">Skills</a>
                 <a href="#projects" class="hover:underline underline-offset-4">Projects</a>
+                <a href="#experience" class="hover:underline underline-offset-4">Experience</a>
                 <a href="#publications" class="hover:underline underline-offset-4">Research</a>
             </div>
             <div class="flex items-center gap-4">
-                <a href="resume.pdf" class="px-6 py-3 bg-black text-white text-xs font-bold uppercase tracking-wider hover:bg-white hover:text-black border-2 border-black transition-all">Resume</a>
+                <a href="Lokesh_Gundoju_R_I_MK1.odt" target="_blank" class="px-6 py-3 bg-black text-white text-xs font-bold uppercase tracking-wider hover:bg-white hover:text-black border-2 border-black transition-all">Resume</a>
             </div>
         </div>
     </nav>
 
     <main class="max-w-7xl mx-auto px-6 py-12">
         <section id="about" class="min-h-[70vh] flex flex-col justify-center border-b-4 border-black py-20">
-            <h1 class="text-6xl md:text-9xl font-black leading-none mb-8 tracking-tighter">
-                COMPUTATIONAL<br>LITHOGRAPHY &<br><span class="text-white bg-black p-2">EDGE ML</span>
+            <h1 class="text-5xl md:text-8xl lg:text-9xl font-black leading-none mb-8 tracking-tighter">
+                COMPUTATIONAL<br>LITHOGRAPHY &<br><span class="text-white bg-black p-2 inline-block mt-2">EDGE ML</span>
             </h1>
-            <p class="text-xl md:text-2xl max-w-3xl leading-snug font-medium">
+            <p class="text-xl md:text-2xl max-w-3xl leading-snug font-medium mt-4">
                 Electronics & Communication Engineering student. I build data-driven optimization tools for semiconductor manufacturing, focusing on sub-wavelength physics and embedded intelligence.
             </p>
         </section>
@@ -69,27 +73,30 @@
         <section id="skills" class="py-20 border-b-4 border-black">
             <h2 class="text-4xl mb-12">01. Technical Skills</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="brutal-border p-8 brutal-shadow">
+                <div class="brutal-border p-8 brutal-shadow brutal-card-hover bg-white">
                     <h3 class="font-bold text-xl mb-4 underline">Process & Yield</h3>
                     <ul class="text-lg space-y-2 uppercase font-bold text-slate-700">
                         <li>SPC / DOE</li>
                         <li>Computational Lithography</li>
+                        <li>EUV / DUV Modeling</li>
                         <li>EWMA / CUSUM</li>
                     </ul>
                 </div>
-                <div class="brutal-border p-8 brutal-shadow">
+                <div class="brutal-border p-8 brutal-shadow brutal-card-hover bg-white">
                     <h3 class="font-bold text-xl mb-4 underline">Software & AI</h3>
                     <ul class="text-lg space-y-2 uppercase font-bold text-slate-700">
                         <li>Python / C++</li>
                         <li>XGBoost / Ensemble ML</li>
+                        <li>FastAPI / Docker</li>
                         <li>Time-Series Analytics</li>
                     </ul>
                 </div>
-                <div class="brutal-border p-8 brutal-shadow">
+                <div class="brutal-border p-8 brutal-shadow brutal-card-hover bg-white">
                     <h3 class="font-bold text-xl mb-4 underline">Hardware</h3>
                     <ul class="text-lg space-y-2 uppercase font-bold text-slate-700">
                         <li>Verilog / RTL</li>
                         <li>TinyML / Edge Devices</li>
+                        <li>SkyWater 130nm PDK</li>
                         <li>Altium PCB Design</li>
                     </ul>
                 </div>
@@ -99,62 +106,220 @@
         <section id="projects" class="py-20 border-b-4 border-black">
             <h2 class="text-4xl mb-12">02. Projects</h2>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div class="brutal-border p-10 brutal-shadow bg-black text-white">
-                    <h3 class="text-3xl font-bold mb-4">AttoFab</h3>
-                    <p class="text-lg mb-6 opacity-80">
-                        Numerical modeling of resolution limits using the Rayleigh Criterion for sub-7nm process development.
-                    </p>
-                    <div class="bg-white text-black p-6 mb-6 code-font text-center text-xl font-bold border-4 border-black">
-                        $R = k_1 \cdot \frac{\lambda}{NA}$
+                
+                <!-- AttoFab (Dark Card) -->
+                <div class="brutal-border p-10 brutal-shadow brutal-card-hover bg-black text-white flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-4">AttoFab</h3>
+                        <p class="text-lg mb-6 opacity-90">
+                            Engineered an open-source, Python-based computational simulation engine targeting sub-wavelength fabrication and pattern transfer profile validation under EUV and DUV conditions.
+                        </p>
+                        <div class="bg-white text-black p-6 mb-6 code-font text-center text-xl font-bold border-4 border-black">
+                            $R = k_1 \cdot \frac{\lambda}{NA}$
+                        </div>
                     </div>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-3 py-1 bg-white text-black font-bold uppercase text-xs">Python</span>
-                        <span class="px-3 py-1 bg-white text-black font-bold uppercase text-xs">Numerical Modeling</span>
+                    <div class="flex flex-wrap gap-3 mt-auto">
+                        <span class="px-3 py-1 bg-white text-black font-bold uppercase text-xs border border-white">Python</span>
+                        <span class="px-3 py-1 bg-white text-black font-bold uppercase text-xs border border-white">Numerical Modeling</span>
                     </div>
                 </div>
 
-                <div class="brutal-border p-10 brutal-shadow">
-                    <h3 class="text-3xl font-bold mb-4 underline">SPC Yield Analytics</h3>
-                    <p class="text-lg mb-6 text-slate-700">
-                        Automated excursion monitoring for manufacturing wafers. Achieved 90% anomaly detection using EWMA/CUSUM charts.
-                    </p>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-3 py-1 bg-black text-white font-bold uppercase text-xs">Time-Series</span>
-                        <span class="px-3 py-1 bg-black text-white font-bold uppercase text-xs">Yield Analytics</span>
+                <!-- SPC Analytics (Light Card) -->
+                <div class="brutal-border p-10 brutal-shadow brutal-card-hover bg-white flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-4 underline">SPC Yield Analytics</h3>
+                        <p class="text-lg mb-6 text-slate-700 font-medium">
+                            Automated excursion monitoring for manufacturing wafers, modeling a 20-40% reduction in defective starts. Achieved 90% anomaly detection using EWMA/CUSUM charts.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-3 mt-auto">
+                        <span class="px-3 py-1 bg-black text-white font-bold uppercase text-xs border border-black">Time-Series</span>
+                        <span class="px-3 py-1 bg-black text-white font-bold uppercase text-xs border border-black">SPC / EWMA</span>
                     </div>
                 </div>
+
+                <!-- AttoSense (Light Card) -->
+                <div class="brutal-border p-10 brutal-shadow brutal-card-hover bg-white flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-4 underline">AttoSense</h3>
+                        <p class="text-lg mb-6 text-slate-700 font-medium">
+                            Accomplished production-ready NLU for intent analysis using zero-shot discovery and multimodal auditing. Architected a FastAPI microservice utilizing Groq Whisper and Llama-3.2-Vision.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-3 mt-auto">
+                        <span class="px-3 py-1 bg-black text-white font-bold uppercase text-xs border border-black">Multimodal AI</span>
+                        <span class="px-3 py-1 bg-black text-white font-bold uppercase text-xs border border-black">FastAPI</span>
+                    </div>
+                </div>
+
+                <!-- SECOM (Dark Card) -->
+                <div class="brutal-border p-10 brutal-shadow brutal-card-hover bg-black text-white flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-4">SECOM Sensor ML</h3>
+                        <p class="text-lg mb-6 opacity-90">
+                            Achieved 90% accuracy in semiconductor wafer defect classification to prevent process drift. Optimized 8 ensemble models on imbalanced sensor arrays, yielding 95% ROC-AUC.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-3 mt-auto">
+                        <span class="px-3 py-1 bg-white text-black font-bold uppercase text-xs border border-white">Ensemble ML</span>
+                        <span class="px-3 py-1 bg-white text-black font-bold uppercase text-xs border border-white">XGBoost</span>
+                    </div>
+                </div>
+
+                <!-- CAPHA (Dark Card) -->
+                <div class="brutal-border p-10 brutal-shadow brutal-card-hover bg-black text-white flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-4">CAPHA TinyML</h3>
+                        <p class="text-lg mb-6 opacity-90">
+                            Autonomous, real-time inference framework for low-power microcontrollers featuring proactive anomaly detection. Integrated local models without cloud reliance.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-3 mt-auto">
+                        <span class="px-3 py-1 bg-white text-black font-bold uppercase text-xs border border-white">TinyML</span>
+                        <span class="px-3 py-1 bg-white text-black font-bold uppercase text-xs border border-white">Embedded C</span>
+                    </div>
+                </div>
+
+                <!-- Double_PINN & AttoCore (Combined Light Card) -->
+                <div class="brutal-border p-10 brutal-shadow brutal-card-hover bg-white flex flex-col justify-between">
+                    <div>
+                        <div class="mb-8">
+                            <h3 class="text-2xl font-bold mb-2 underline">Double_PINN</h3>
+                            <p class="text-md text-slate-700 font-medium">A differentiable pipeline bridging process physics and device physics.</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2 underline">AttoCore</h3>
+                            <p class="text-md text-slate-700 font-medium">The single-neuron Leaky Integrate-and-Fire (LIF) core Simulator.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-3 mt-8">
+                        <span class="px-3 py-1 bg-black text-white font-bold uppercase text-xs border border-black">Physics-Informed NN</span>
+                        <span class="px-3 py-1 bg-black text-white font-bold uppercase text-xs border border-black">SNN</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="experience" class="py-20 border-b-4 border-black">
+            <h2 class="text-4xl mb-12">03. Experience</h2>
+            <div class="space-y-8">
+                
+                <div class="brutal-border p-8 brutal-shadow bg-white flex flex-col md:flex-row justify-between md:items-start gap-4">
+                    <div class="md:w-1/3">
+                        <h3 class="font-bold text-2xl uppercase">AI & ML Intern</h3>
+                        <p class="code-font font-bold text-slate-500 mt-2">Infosys Springboard</p>
+                        <p class="text-sm font-bold mt-1 uppercase tracking-wider">Feb 2026 - Apr 2026</p>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-lg font-medium text-slate-700">Served as a Project Associate in the NLU Bot Trainer program, training and optimizing data pipelines for industrial intent classification. Analyzed natural language dataset patterns to refine intent detection accuracy.</p>
+                    </div>
+                </div>
+
+                <div class="brutal-border p-8 brutal-shadow bg-white flex flex-col md:flex-row justify-between md:items-start gap-4">
+                    <div class="md:w-1/3">
+                        <h3 class="font-bold text-2xl uppercase">Embedded & IoT Intern</h3>
+                        <p class="code-font font-bold text-slate-500 mt-2">Uni Convergence Tech</p>
+                        <p class="text-sm font-bold mt-1 uppercase tracking-wider">May 2025 - Jun 2025</p>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-lg font-medium text-slate-700">Prototyped local TinyML inference engines for the CAPHA IoT system, enabling low-latency anomaly detection directly on edge microcontrollers within strict RAM/Flash memory constraints.</p>
+                    </div>
+                </div>
+
+                <div class="brutal-border p-8 brutal-shadow bg-white flex flex-col md:flex-row justify-between md:items-start gap-4">
+                    <div class="md:w-1/3">
+                        <h3 class="font-bold text-2xl uppercase">Product Intern</h3>
+                        <p class="code-font font-bold text-slate-500 mt-2">Sri Nikhil Krishna Solutions</p>
+                        <p class="text-sm font-bold mt-1 uppercase tracking-wider">Nov 2023 - May 2024</p>
+                    </div>
+                    <div class="md:w-2/3">
+                        <p class="text-lg font-medium text-slate-700">Conducted high-precision electrical characterization and functional quality control procedures for optoelectronic PCB assemblies. Optimized testing protocols to evaluate hardware quality.</p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <section id="publications" class="py-20 border-b-4 border-black">
-            <h2 class="text-4xl mb-12">03. Research</h2>
-            <div class="brutal-border p-10 brutal-shadow">
-                <h3 class="font-bold text-2xl mb-2">Early Warning System for At-Risk Students</h3>
-                <p class="text-lg mb-4 uppercase tracking-widest text-slate-500">EdArXiv | 2026</p>
-                <a href="https://doi.org/10.35542/osf.io/ga46q_v1" class="text-black font-bold text-lg underline underline-offset-8 decoration-4 hover:bg-black hover:text-white transition p-2">
-                    DOI: 10.35542/osf.io/ga46q_v1
-                </a>
+            <h2 class="text-4xl mb-12">04. Research & Education</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Publications -->
+                <div class="space-y-8">
+                    <div class="brutal-border p-8 brutal-shadow brutal-card-hover bg-black text-white">
+                        <h3 class="font-bold text-2xl mb-2">Early Warning System for At-Risk Students (SHAP & OULAD)</h3>
+                        <p class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-400">EdArXiv | 2026</p>
+                        <a href="https://doi.org/10.35542/osf.io/ga46q_v1" target="_blank" class="inline-block bg-white text-black font-bold text-sm px-4 py-2 border-2 border-transparent hover:border-white hover:bg-black hover:text-white transition">
+                            DOI: 10.35542/osf.io/ga46q_v1
+                        </a>
+                    </div>
+
+                    <div class="brutal-border p-8 brutal-shadow brutal-card-hover bg-white">
+                        <h3 class="font-bold text-2xl mb-2 underline">Analytical Redundancy for False Alarm Suppression in Edge SPC</h3>
+                        <p class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-500">SSRN | July 2026</p>
+                        <a href="http://dx.doi.org/10.2139/ssrn.7211483" target="_blank" class="inline-block bg-black text-white font-bold text-sm px-4 py-2 border-2 border-transparent hover:border-black hover:bg-white hover:text-black transition">
+                            DOI: 10.2139/ssrn.7211483
+                        </a>
+                    </div>
+
+                    <div class="brutal-border p-8 brutal-shadow brutal-card-hover bg-white">
+                        <h3 class="font-bold text-xl mb-2 underline">Risk factors and their Shap values Dataset</h3>
+                        <p class="text-sm font-bold mb-4 uppercase tracking-widest text-slate-500">IEEE DataPort | Jan 2025</p>
+                        <a href="https://doi.org/10.21227/SVQF-PN8" target="_blank" class="inline-block bg-black text-white font-bold text-sm px-4 py-2 border-2 border-transparent hover:border-black hover:bg-white hover:text-black transition">
+                            DOI: 10.21227/SVQF-PN8
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="brutal-border p-10 brutal-shadow bg-white h-fit">
+                    <h3 class="text-3xl font-bold mb-8 underline">Academic Background</h3>
+                    <ul class="space-y-6">
+                        <li class="pb-6 border-b-2 border-black border-dashed">
+                            <h4 class="font-bold text-xl uppercase">BTech in ECE</h4>
+                            <p class="font-medium text-slate-700">Adikavi Nannaya University (AKNU)</p>
+                            <p class="code-font text-sm font-bold text-slate-500 mt-1">Exp. April 2027 (3rd Year)</p>
+                        </li>
+                        <li class="pb-6 border-b-2 border-black border-dashed">
+                            <h4 class="font-bold text-xl uppercase">Semiconductor Fabrication & Lithography</h4>
+                            <p class="font-medium text-slate-700">CeNSE, IISc Bengaluru (Summer School)</p>
+                            <p class="code-font text-sm font-bold text-slate-500 mt-1">2026</p>
+                        </li>
+                        <li class="pb-6 border-b-2 border-black border-dashed">
+                            <h4 class="font-bold text-xl uppercase">Semiconductor Fabrication 101</h4>
+                            <p class="font-medium text-slate-700">Purdue Univ, UT Austin, Intel Corp</p>
+                            <p class="code-font text-sm font-bold text-slate-500 mt-1">May 2025</p>
+                        </li>
+                        <li>
+                            <h4 class="font-bold text-xl uppercase">Undergrad Diploma in ECE</h4>
+                            <p class="font-medium text-slate-700">SBTET A.P., Gov. Polytechnic</p>
+                            <p class="code-font text-sm font-bold text-slate-500 mt-1">May 2024</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section id="contact" class="py-20">
             <h2 class="text-4xl mb-12 text-center">Get in Touch</h2>
-            <form action="mailto:lokesh_gundoju@outlook.com" method="post" enctype="text/plain" class="max-w-2xl mx-auto brutal-border p-10 brutal-shadow space-y-6">
-                <input type="text" name="name" placeholder="Name" aria-label="Name" class="w-full border-b-4 border-black p-3 text-xl focus:outline-none">
-                <input type="email" name="email" placeholder="Email" aria-label="Email" class="w-full border-b-4 border-black p-3 text-xl focus:outline-none">
-                <textarea name="message" placeholder="Message" aria-label="Message" class="w-full border-b-4 border-black p-3 text-xl focus:outline-none h-40"></textarea>
-                <button type="submit" class="w-full bg-black text-white py-4 font-bold text-lg uppercase tracking-widest hover:bg-white hover:text-black border-4 border-black transition">Send Message</button>
+            <form action="mailto:lokesh_gundoju@outlook.com" method="post" enctype="text/plain" class="max-w-2xl mx-auto brutal-border p-10 brutal-shadow bg-white space-y-6">
+                <input type="text" name="name" placeholder="Name" aria-label="Name" class="w-full border-b-4 border-black p-3 text-xl focus:outline-none font-medium placeholder-slate-400">
+                <input type="email" name="email" placeholder="Email" aria-label="Email" class="w-full border-b-4 border-black p-3 text-xl focus:outline-none font-medium placeholder-slate-400">
+                <textarea name="message" placeholder="Message" aria-label="Message" class="w-full border-b-4 border-black p-3 text-xl focus:outline-none h-40 font-medium placeholder-slate-400"></textarea>
+                <button type="submit" class="w-full bg-black text-white py-4 font-bold text-lg uppercase tracking-widest hover:bg-white hover:text-black border-4 border-black transition cursor-pointer">Send Message</button>
             </form>
         </section>
     </main>
 
-    <footer class="py-12 border-t-4 border-black text-center">
-        <div class="flex justify-center gap-10 text-3xl mb-8">
-            <a href="https://github.com/LKSH-GNDJ" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/lokesh-gundoju" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://orcid.org/0009-0004-6582-6644" aria-label="ORCID"><i class="fab fa-orcid"></i></a>
+    <footer class="py-12 border-t-4 border-black text-center bg-white">
+        <div class="flex justify-center gap-10 text-4xl mb-8">
+            <a href="https://github.com/LKSH-GNDJ" target="_blank" aria-label="GitHub" class="hover:-translate-y-2 transition-transform"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/lokesh-gundoju" target="_blank" aria-label="LinkedIn" class="hover:-translate-y-2 transition-transform"><i class="fab fa-linkedin"></i></a>
+            <a href="https://orcid.org/0009-0004-6582-6644" target="_blank" aria-label="ORCID" class="hover:-translate-y-2 transition-transform"><i class="fab fa-orcid"></i></a>
+            <a href="mailto:lokesh_gundoju@outlook.com" aria-label="Email" class="hover:-translate-y-2 transition-transform"><i class="fas fa-envelope"></i></a>
         </div>
-        <p class="font-bold uppercase tracking-widest">&copy; 2026 Lokesh Gundoju. Engineering Intelligence.</p>
+        <p class="font-bold uppercase tracking-widest text-sm text-slate-800">&copy; 2026 Lokesh Gundoju. Engineering Intelligence.</p>
     </footer>
 
 </body>
